@@ -48,6 +48,10 @@ const useStyles = makeStyles(theme => ({
     marginRight: 40,
     maxWidth: 74,
 
+    "@media (max-width: 1024px)": {
+      maxWidth: 60,
+    },
+
     "@media (max-width: 768px)": {
       marginRight: 20,
       maxWidth: 37,
@@ -57,6 +61,10 @@ const useStyles = makeStyles(theme => ({
   imgLogo: {
     objectFit: "contain",
     maxWidth: 171,
+
+    "@media (max-width: 1024px)": {
+      maxWidth: 150,
+    },
 
     "@media (max-width: 768px)": {
       maxWidth: 85,
@@ -68,6 +76,10 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
     marginRight: theme.spacing(5),
     fontSize: 12,
+
+    "@media (max-width: 1024px)": {
+      marginRight: theme.spacing(3),
+    },
   },
 
   menuItemActive: {
@@ -115,6 +127,20 @@ const useStyles = makeStyles(theme => ({
       justifyContent: "center",
       alignItems: "center",
     },
+  },
+
+  icTwitter: {
+    width: 24,
+    marginRight: 16,
+  },
+
+  icFacebook: {
+    width: 16,
+    marginRight: 16,
+  },
+
+  icInta: {
+    width: 20,
   },
 }))
 
@@ -250,7 +276,7 @@ const Layout = ({ location, title, children }) => {
 
   React.useEffect(() => {
     const setResponsiveness = () => {
-      return window.innerWidth < 900
+      return window.innerWidth < 992
         ? setState(prevState => ({ ...prevState, mobileView: true }))
         : setState(prevState => ({ ...prevState, mobileView: false }))
     }
@@ -279,13 +305,13 @@ const Layout = ({ location, title, children }) => {
             </Grid>
             <Grid item xs={12} xl={12} sm={12} md={6} lg={6}>
               <Box className={classes.contact}>
-                <Link to="/" style={{ width: 24, marginRight: 16 }}>
+                <Link to="/" className={classes.icTwitter}>
                   <img alt="Twitter" src={icTwitter} />
                 </Link>
-                <Link to="/" style={{ width: 16, marginRight: 16 }}>
+                <Link to="/" className={classes.icFacebook}>
                   <img alt="Facebook" src={icFacebook} />
                 </Link>
-                <Link to="/" style={{ width: 20 }}>
+                <Link to="/" className={classes.icInta}>
                   <img alt="Inta" src={icInta} />
                 </Link>
               </Box>
