@@ -1,14 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Izundo`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Viet Nguyen`,
+      summary: `Welcome to Izundo`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Welcome to Izundo`,
+    siteUrl: `https://izundo-test.surge.sh/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `izundo`,
+      facebook: `izundo`,
+      instagram: `izundo`,
     },
   },
   plugins: [
@@ -113,8 +115,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Izundo`,
+        short_name: `Izundo`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
